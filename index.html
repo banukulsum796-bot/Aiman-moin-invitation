@@ -25,6 +25,33 @@
 @media(max-width:360px){.person-row{grid-template-columns:1fr}.art-frame{max-width:220px;margin:auto;width:100%}.info{text-align:center}}
 </style></head>
 <body>
+  
+<audio id="weddingMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="toggleMusic()" id="musicButton">
+  🎵 Play Music
+</button>
+
+  <script>
+  const music = document.getElementById("weddingMusic");
+  const button = document.getElementById("musicButton");
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play().then(() => {
+        button.textContent = "⏸ Pause Music";
+      }).catch(() => {
+        button.textContent = "🎵 Tap to Play";
+      });
+    } else {
+      music.pause();
+      button.textContent = "🎵 Play Music";
+    }
+  }
+</script>
+  
 <section class="cover" id="cover"><div class="cover-inner fade">
 <p class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p><div class="eyebrow">With the blessings of Allah</div>
 <div class="names">Aiman Sultana<br><span class="amp">&amp;</span><br>Moin Khan</div>
