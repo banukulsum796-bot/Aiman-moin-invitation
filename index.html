@@ -1,1 +1,124 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aiman & Moin | Engagement</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;padding:18px;
+ display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(145deg,#fff8f7,#f4dce2,#efd0d7);
+ color:#793d4c;font-family:Georgia,serif;
+}
+.card{
+ width:100%;max-width:440px;min-height:690px;
+ text-align:center;padding:38px 24px;
+ border:1px solid #b99a61;outline:1px solid #b99a61;
+ outline-offset:-9px;border-radius:220px 220px 18px 18px;
+ background:rgba(255,250,248,.88);
+ box-shadow:0 15px 45px #793d4c22;
+}
+.gold{color:#b99a61}
+.arabic{font-size:20px;margin:28px 0}
+.kicker{font:10px Arial;letter-spacing:3px;color:#a46d7b}
+h1{font-size:51px;font-weight:normal;line-height:1.08;margin:20px 0 10px}
+.amp{font-style:italic;color:#b99a61;font-size:34px}
+.subtitle{font:11px Arial;letter-spacing:4px;margin:22px 0}
+.line{color:#b99a61;margin:20px}
+.message{font-size:15px;line-height:1.8}
+.tap-area{margin:28px 0}
+#tap{
+ width:112px;height:112px;border-radius:50%;border:1px solid #b99a61;
+ background:linear-gradient(135deg,#d7b875,#b18c4e);color:white;
+ font:12px Arial;letter-spacing:2px;line-height:1.8;
+ box-shadow:0 0 0 8px #b99a6122;cursor:pointer;
+}
+#tap:active{transform:scale(.95)}
+#details{display:none}
+#details.show{display:block;animation:open .9s ease}
+@keyframes open{from{opacity:0;transform:translateY(18px)}
+to{opacity:1;transform:translateY(0)}}
+.label{font:10px Arial;letter-spacing:3px;color:#a46d7b;margin-top:20px}
+.name{font-size:25px;margin:10px 0}
+.parents{font-size:14px;line-height:1.8}
+.venue{font-size:23px;margin:12px}
+.footer{font-style:italic;font-size:13px;margin-top:25px}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="gold">✧ ❀ ✧</div>
+  <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <div class="kicker">TOGETHER WITH OUR FAMILIES</div>
+
+  <h1>Aiman<br><span class="amp">&</span><br>Moin</h1>
+  <div class="subtitle">ENGAGEMENT INVITATION</div>
+  <div class="line">━━━━ ❦ ━━━━</div>
+  <p class="message">
+    With the blessings of Allah,<br>
+    we warmly invite you to celebrate<br>
+    our special occasion.
+  </p>
+
+  <div class="tap-area" id="tapArea">
+    <button id="tap" onclick="openInvite()">
+      TAP<br>TO OPEN<br>✦
+    </button>
+    <p class="kicker">A SPECIAL INVITATION</p>
+  </div>
+
+  <section id="details">
+    <div class="line">━━━━ ❦ ━━━━</div>
+
+    <div class="label">THE BRIDE</div>
+    <div class="name">Aiman Sultana</div>
+    <div class="parents">
+      Daughter of<br>
+      <strong>Tarannum Sultana</strong><br>
+      [Bride's father's name]
+    </div>
+
+    <div class="gold" style="font-size:25px;margin:15px">&</div>
+
+    <div class="label">THE GROOM</div>
+    <div class="name">Moin Khan</div>
+    <div class="parents">
+      Son of<br>
+      <strong>[Groom's mother's name]</strong><br>
+      [Groom's father's name]
+    </div>
+
+    <div class="line">━━━━ ✧ ━━━━</div>
+    <div class="label">DATE & TIME</div>
+    <div class="name">[Add engagement date]</div>
+    <div class="parents">[Add time]</div>
+
+    <div class="label">VENUE</div>
+    <div class="venue">MS Palace</div>
+
+    <p class="message">
+      Your gracious presence and blessings<br>
+      will make our day more memorable.
+    </p>
+    <div class="footer">With love and duas, the families ♡</div>
+  </section>
+  <div class="gold" style="margin-top:25px">✧ ❀ ✧</div>
+</main>
+
+<script>
+function openInvite(){
+  document.getElementById('details').classList.add('show');
+  document.getElementById('tapArea').style.display='none';
+  setTimeout(()=>{
+    document.getElementById('details').scrollIntoView({
+      behavior:'smooth',block:'start'
+    });
+  },100);
+}
+</script>
+</body>
+</html>
+
